@@ -95,7 +95,7 @@
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql-kafka-0-10_2.12</artifactId>
             <version>${spark.core.version}</version>
-            <scope>test</scope>
+
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kinesis-asl -->
         <dependency>
@@ -144,7 +144,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>NumberOfWords</mainClass>
+                            <mainClass>IntegratingKafka</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
