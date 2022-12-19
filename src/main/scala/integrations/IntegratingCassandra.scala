@@ -40,7 +40,7 @@ object IntegratingCassandra {
    */
 
     // create a ForeachWriter class based of our data object Car
-    class CarCassandraForeachWriter extends ForeachWriter {
+    class CarCassandraForeachWriter extends ForeachWriter [Car]{
     // for each batch and for every partition of a given batch, epoch = block of data
     val keyspace = "public"
     val table = "cars"
