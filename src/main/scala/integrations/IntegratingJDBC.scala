@@ -12,7 +12,7 @@ object IntegratingJDBC {
   spark.sparkContext.setLogLevel("WARN")
   // Connection properties for JDBC connector
   val driver = "org.postgresql.Driver"
-  val url = "jdbc.postgresql://localhost:5432/cars"
+  val url = "jdbc.postgresql://localhost:5432/ashsteph"
   val user = "docker"
   val password = "docker"
 
@@ -34,6 +34,7 @@ object IntegratingJDBC {
           .option("url", url)
           .option("user", user)
           .option("password", password)
+          .option("dbtable", "public.cars")
           .save()
       }
       .start()

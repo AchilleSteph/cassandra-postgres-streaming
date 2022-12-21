@@ -55,7 +55,7 @@ object IntegratingCassandra {
         session.execute(
           s"""
              |insert into $keyspace.$table ("Name", "Horsepower")
-             |values ('${car.Name}', ${car.Horsepower})
+             |values ('${car.Name}', ${car.Horsepower.orNull})
              |""".stripMargin)
       }
     }
